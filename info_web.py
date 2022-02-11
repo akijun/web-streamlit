@@ -7,7 +7,7 @@ def page1():
 
     left_column.title("原油　入力")
     in_radio=left_column.radio(
-         "単位",('BPD','kL/年')
+         "単位",('BPD','kL/年','t/年')
         )
     num=left_column.number_input(in_radio)
 
@@ -15,10 +15,12 @@ def page1():
         num=num
     elif in_radio=='kL/年':
         num=num*6.2898/340
+    elif in_radio=='t/年':
+        num=num*6.2898/340*0.8
 
     right_column.title("原油　出力")
     out_radio=right_column.radio(
-        "単位",('BPD','KL/年')
+        "単位",('BPD','KL/年','t/年')
     )
     right_column.text(out_radio)
 
@@ -26,6 +28,8 @@ def page1():
         num=num
     elif out_radio=='KL/年':
         num=num*340/6.2898
+    elif out_radio=='t/年':
+        num=num*340/6.2898/0.8
 
     right_column.subheader(num)
 
