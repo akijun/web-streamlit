@@ -106,7 +106,7 @@ def page3():
 
 def page4():
     left_column,right_column=st.columns(2)
-    left_column.title('e-fuel 入力')
+    left_column.title('e-fuel　入力')
     in_radio=left_column.radio(
         "入力単位",('BPD','電力 MW','H2 t/d','CO2 t/d')
     )
