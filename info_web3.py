@@ -240,7 +240,7 @@ def page4():
     elif in_radio=="億kW":
         num3=num3*100
     elif in_radio=="万kW":
-        num3=num3*100/1000
+        num3=num3*100/10000
 
     right_column.title('電力　出力')
     out_radio=right_column.radio(
@@ -255,7 +255,7 @@ def page4():
     elif out_radio=="億kW":
         num3=num3/100
     elif out_radio=="万kW":
-        num3=num3/100*1000
+        num3=num3/100*10000
     right_column.text(out_radio)
     right_column.subheader(num3)
     return
@@ -277,7 +277,7 @@ def page5():
     elif in_radio=='燃料kL/年':
         num4=num4*6.2898/340
     elif in_radio=='燃料kg/d':
-        num4=num4/150/0.8
+        num4=num4/150/0.8.
     elif in_radio=='電力 W':
         num4=num4*5/1000000
     elif in_radio=='H2 t/d':
