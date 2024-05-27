@@ -277,7 +277,7 @@ def page5():
     elif in_radio=='燃料kL/年':
         num4=num4*6.2898/340
     elif in_radio=='燃料kg/d':
-        num4=num4/150/0.8.
+        num4=num4/150/0.8
     elif in_radio=='電力 W':
         num4=num4*5/1000000
     elif in_radio=='H2 t/d':
